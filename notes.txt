@@ -1,0 +1,11 @@
+pubDate, id, name, designers, publishers, processed(datetime), scraped(datetime)?
+
+insert with pubDate, id, name, scraped?
+
+run bgg_lookup once a day to batch lookup designers & publishers - update table
+
+run filter & send once a day on all entries with no processed date and designers or publishers not empty
+send email with all entries that survive filter
+set processed datetime
+
+purge entries after 6 months processed or pubDate
